@@ -1,0 +1,10 @@
+.navbar-default{
+    color: blue;
+}
+#footer { background:#A8A8A8;}
+/*#footer-inner {border: 1px solid blue; box-sizing: border-box; text-align:center; padding:12px; width:100%;}*/
+#footer-inner {text-align:center; padding:12px;margin: 0;bottom: 0;position: fixed;width: 100%;background:#bfbfbf;}
+#footer a {color:blue;text-decoration:none;}
+
+/* Clear both sides to assist with div alignment  */
+.clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}

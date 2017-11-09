@@ -1,0 +1,81 @@
+<div class="container" style="margin-top:5%;margin-bottom:10%;">
+  <button class="btn btn-info" (click)="back()" style="float:right;">back</button>
+    <h1 (click)="addEmployee()" class="well" style="text-align:center;margin-top:10%;">Add Employee</h1>
+	<div class="col-lg-12" *ngIf="new_employee">
+	<div class="row" style="margin-bottom:10%;">
+				<form>
+					<div class="col-sm-12">
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>First Name</label>
+								<input type="text" placeholder="Enter First Name Here.." [(ngModel)]="first_name" [ngModelOptions]="{standalone: true}" class="form-control">
+							</div>
+							<div class="col-sm-6 form-group">
+								<label>Last Name</label>
+								<input type="text" placeholder="Enter Last Name Here.." [(ngModel)]="last_name" [ngModelOptions]="{standalone: true}" class="form-control">
+							</div>
+						</div>					
+						<div class="form-group">
+							<label>Address</label>
+							<textarea placeholder="Enter Address Here.." rows="3" [(ngModel)]="address" [ngModelOptions]="{standalone: true}" class="form-control"></textarea>
+						</div>	
+						<div class="row">
+							<div class="col-sm-4 form-group">
+								<label>City</label>
+								<input type="text" placeholder="Enter City Name Here.." [(ngModel)]="city" [ngModelOptions]="{standalone: true}" class="form-control">
+							</div>	
+							<div class="col-sm-4 form-group">
+								<label>State</label>
+								<input type="text" placeholder="Enter State Name Here.." [(ngModel)]="state" [ngModelOptions]="{standalone: true}" class="form-control">
+							</div>	
+							<div class="col-sm-4 form-group">
+								<label>Zip</label>
+								<input type="text" placeholder="Enter Zip Code Here.." [(ngModel)]="pincode" [ngModelOptions]="{standalone: true}" class="form-control">
+							</div>		
+						</div>
+						<div class="row">
+							<div class="col-sm-6 form-group">
+								<label>Title</label>
+								<input type="text" placeholder="Enter Designation Here.." [(ngModel)]="title" [ngModelOptions]="{standalone: true}" class="form-control">
+							</div>		
+							<div class="col-sm-6 form-group">
+								<label>Password</label>
+								<input type="password" placeholder="Enter Password Here.." [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control">
+							</div>	
+						</div>						
+					<div class="form-group">
+						<label>Phone Number</label>
+						<input type="text" placeholder="Enter Phone Number Here.." [(ngModel)]="phone_number" [ngModelOptions]="{standalone: true}" class="form-control">
+					</div>		
+					<div class="form-group">
+						<label>Email Address</label>
+						<input type="text" placeholder="Enter Email Address Here.." [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control">
+					</div>	
+					<!-- <div class="form-group">
+						<label>Website</label>
+						<input type="text" placeholder="Enter Website Name Here.." class="form-control">
+          </div> -->
+          <h1 *ngIf='empty_value'>Empty values are not allowed!!!</h1>
+					<button (click)="onSubmit(first_name,last_name,address,city,state,pincode,title,password,phone_number,email)" style="margin-left:40%;" type="button" class="btn btn-lg btn-info">Submit</button>					
+					</div>
+				</form> 
+				</div>
+  </div>
+  <div>
+    <h1 (click)="delete()" class="well"  style="text-align:center;">Delete Employee</h1>
+    <div class="col-lg-12" *ngIf="delete_employee">
+    <div class="row" style="margin-bottom:10%;">
+      <form>
+          <div class="row">
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="text" placeholder="Enter Email Address Here.." class="form-control">
+        </div>	
+   
+        <button (click)="onDelete()" style="margin-left:40%;" type="button" class="btn btn-lg btn-info">Delete</button>					
+        </div>
+      </form> 
+      </div>
+    </div>
+  </div>
+	</div>
